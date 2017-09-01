@@ -1,0 +1,60 @@
+[[$header]]
+
+<section class="breadcrumbs">
+    <h2>Путь до текущей страницы</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 breadcrumbs__content">
+                [[breadcrumb? &containerTpl=`@INLINE <ol class="breadcrumbs__list breadcrumb" id="breadcrumb" itemprop="breadcrumb">
+                    [[+crumbs]]
+                </ol>
+                `]]
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content__container container">
+    <div class="content__row row">
+        [[$aside]]
+
+        <main class="content__main col-sm-8">
+            <article class="content__article content__padding">
+                <h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1> [[*content]] [[pdoResources? &tplFirst=`@INLINE
+                <div class="panel panel-default" role="tablist">
+                    <div class="panel-heading" role="tab" id="heading[[+id]]">
+                        <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
+                                    <i class="fa fa-question-circle"></i>&nbsp; Вопрос: [[+pagetitle]]
+                                </a>
+                              </h4>
+                    </div>
+                    <div id="collapse[[+id]]" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading[[+id]]">
+                        <div class="panel-body">
+                            <i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
+                        </div>
+                    </div>
+                </div>
+                <!-- panel panel-default-->
+                ` &tpl=`@INLINE
+                <div class="panel panel-default" role="tablist">
+                    <div class="panel-heading" role="tab" id="heading[[+id]]">
+                        <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse[[+id]]" aria-expanded="true" aria-controls="collapse[[+id]]">
+                                    <i class="fa fa-question-circle"></i>&nbsp; Вопрос: [[+pagetitle]]
+                                </a>
+                              </h4>
+                    </div>
+                    <div id="collapse[[+id]]" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading[[+id]]">
+                        <div class="panel-body">
+                            <i class="fa fa-quote-left gold-color"></i>&nbsp; <strong>Ответ:</strong> [[+content]]
+                        </div>
+                    </div>
+                </div>
+                <!-- panel panel-default-->` &includeContent=`1` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`ASC` ]]
+            </article>
+        </main>
+    </div>
+</div>
+
+[[$footer]]

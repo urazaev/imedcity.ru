@@ -1,0 +1,174 @@
+[[$header]]
+<section class="slider hidden-xs">
+    <h3>[[*pagetitle]]</h3>
+    <div class="slider__owl-carousel owl-carousel owl-theme">
+        [[pdoResources? &tpl=`@INLINE
+        <div class="slider__item item">
+            <img class="slider__img" src="[[+tv.pic-universe]]" alt="[[+pagetitle]]">
+            <div class="slider__item-title">[[+pagetitle]]
+                <p class="slider__item-small">[[+longtitle]]</p>
+            </div>
+        </div>
+        ` &limit=`3` &includeContent=`1` &includeTVs=`pic-universe` &processTVs=`1` &parents=`129` &depth=`1` &sortby=`menuindex` &sortdir=`DESC`]]
+    </div>
+</section>
+
+<section class="txt-three-cols container">
+    <h2>Контактная информация [[*pagetitle]]</h2>
+    <div class="txt-three-cols__row row hidden-xs">
+
+        <div class="txt-three-cols__column col-md-4 col-xs-6">
+            <div class="txt-three-cols__content">
+                <i class="txt-three-cols__fa fa fa-mobile"></i>
+                <h2 class="txt-three-cols__heading">
+                       Позвоните нам
+                   </h2>
+                <p class="txt-three-cols__txt">
+                    <a href="tel:[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]">[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]</a>
+                </p>
+            </div>
+        </div>
+        <!-- txt-three-cols__column-->
+
+        <div class="txt-three-cols__column col-md-4 col-xs-6">
+            <div class="txt-three-cols__content">
+                <i class="txt-three-cols__fa fa fa-envelope-o"></i>
+                <h2 class="txt-three-cols__heading">
+                       Отправить нам сообщение
+                   </h2>
+                <p class="txt-three-cols__txt">
+                    <a href="mailto:[[getResourceField? &id=`138` &field=`contacts-email` &processTV=`1`]] ">[[getResourceField? &id=`138` &field=`contacts-email` &processTV=`1`]] </a>
+                </p>
+            </div>
+        </div>
+        <!-- txt-three-cols__column-->
+
+        <div class="txt-three-cols__column col-md-4 col-xs-12">
+            <div class="txt-three-cols__content">
+                <i class="txt-three-cols__fa fa fa-map-marker"></i>
+                <h2 class="txt-three-cols__heading">
+                      Посетить нашу клинику
+                   </h2>
+                <p class="txt-three-cols__txt txt-three-cols__txt_map-address">
+                    [[getResourceField? &id=`138` &field=`contacts-address` &processTV=`1`]]
+                </p>
+            </div>
+        </div>
+        <!-- txt-three-cols__column-->
+    </div>
+</section>
+
+<section class="colored-three-cols container">
+    <h2>Разделы [[*pagetitle]]</h2>
+    <div class="colored-three-cols__row row">
+
+        <div class="colored-three-cols__column global_color-one col-sm-4">
+            <div class="colored-three-cols__content">
+                <h2 class="colored-three-cols__header">Услуги</h2>
+                <div class="colored-three-cols__text">
+                    [[getResourceField? &id=`202` &field=`introtext`]]
+                </div>
+                <a href="[[~202]]" class="button colored-three-cols__button">Подробнее</a>
+            </div>
+        </div>
+        <!-- colored-three-cols__column-->
+
+        <div class="colored-three-cols__column global_color-two col-sm-4">
+            <div class="colored-three-cols__content">
+                <h2 class="colored-three-cols__header">Курсы и семинары</h2>
+                <div class="colored-three-cols__text">
+                    [[getResourceField? &id=`195` &field=`introtext`]]
+                </div>
+                <a href="[[~195]]" class="button colored-three-cols__button">Подробнее</a>
+            </div>
+        </div>
+        <!-- colored-three-cols__column-->
+
+        <div class="colored-three-cols__column global_color-three col-sm-4">
+            <div class="colored-three-cols__content">
+                <h2 class="colored-three-cols__header">Режим работы</h2>
+                <div class="colored-three-cols__text">
+                    [[getResourceField? &id=`138` &field=`introtext`]]
+                </div>
+            </div>
+        </div>
+        <!-- colored-three-cols__column-->
+    </div>
+</section>
+
+<section class="txt-four-cols container">
+    <h2>Контактная информация [[*pagetitle]]</h2>
+    <div class="txt-four-cols__row row">
+
+        <div class="txt-four-cols__column col-sm-3 col-xs-6">
+            <div class="txt-four-cols__content">
+                <i class="fa fa-eye"></i>
+                <h2 class="txt-four-cols__heading">
+                      Обследование
+                   </h2>
+                <p class="txt-four-cols__txt">
+                    Обследование и полная диагностика состояния отдельных зубов, зубных рядов и зубочелюстной системы в целом.
+                </p>
+            </div>
+        </div>
+        <!-- txt-four-cols__column-->
+
+        <div class="txt-four-cols__column col-sm-3 col-xs-6">
+            <div class="txt-four-cols__content">
+                <i class="fa fa-heartbeat"></i>
+                <h2 class="txt-four-cols__heading">
+                       Диагностика
+                   </h2>
+                <p class="txt-four-cols__txt">
+                    Данный этап направлен на выявление  всех имеющихся заболеваний зубо-челюстной системы.
+                </p>
+            </div>
+        </div>
+        <!-- txt-four-cols__column-->
+
+        <div class="txt-four-cols__column col-sm-3 col-xs-6">
+            <div class="txt-four-cols__content">
+                <i class="fa  fa-stethoscope"></i>
+                <h2 class="txt-four-cols__heading">
+                      Лечение
+                   </h2>
+                <p class="txt-four-cols__txt">
+                    Фрмулируется полный клинический диагноз и составляется план эффективного  комплексного лечения  нашего пациента.
+                </p>
+            </div>
+        </div>
+        <!-- txt-four-cols__column-->
+        
+        <div class="txt-four-cols__column col-sm-3 col-xs-6">
+            <div class="txt-four-cols__content">
+                <i class="fa fa-medkit"></i>
+                <h2 class="txt-four-cols__heading">
+                       Экстренная помощь
+                   </h2>
+                <p class="txt-four-cols__txt">
+                   В нашей клинике проводится лечение кариеса, пульпита, периодонтита временных и постоянных зубов. Лечение травм зубов. 
+                </p>
+            </div>
+        </div>
+        <!-- txt-four-cols__column-->
+    </div>
+</section>
+
+<section class="services-horizontal container">
+    <h2>Наши услуги</h2>
+    <div class="services-horizontal__row row">
+        [[pdoResources? &tpl=`@INLINE
+        <div class="services-horizontal__column [[+tv.expand:isnotempty=`col-lg-6`]] [[+tv.expand:isempty=`col-lg-3`]] col-md-4 col-sm-6 col-xs-12"> 
+            <div class="services-horizontal__content">
+                <a class="services-horizontal__link" href="[[+uri]]">
+                    <img src="[[+tv.pic-universe]]" alt="" class="services-horizontal__img">
+                    <span>[[+pagetitle]]</span>
+                </a>
+            </div>
+        </div>
+        <!-- services-horizontal__column-->
+        ` &limit=`999` &includeContent=`1` &includeTVs=`pic-universe,expand` &processTVs=`1` &parents=`202` &depth=`1` &sortby=`menuindex` &sortdir=`DESC`]]
+    </div>
+</section>
+
+[[$footer]]

@@ -1,0 +1,101 @@
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__row row">
+
+            <div class="footer__column col-md-3 col-xs-6">
+                <div class="footer__content-wrapper">
+                    <h3 class="footer__header">Контактная информация</h3>
+                    <div class="footer__content">
+                        <p class="footer__address"><span class="fa  fa-map-marker"></span>[[getResourceField? &id=`138` &field=`contacts-address` &processTV=`1`]]
+                        </p>
+                        <p><span class="fa fa-envelope-o"></span>
+                            <a href="mailto:info@imedcity.ru">[[getResourceField? &id=`138` &field=`contacts-email` &processTV=`1`]] </a>
+                        </p>
+                        <p><span class="fa  fa-mobile"></span>
+                            <a href="tel:[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]">[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]</a>
+                        </p>
+                        
+                        <p class="developed-by">
+                            <a href="http://urazaev.com" target="_blank"><span>разработка сайта в 2017 году</span>
+                            <img src="assets/img/developed-by.png" alt="Разработка сайта - urazaev production">
+                            
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- footer__column-->
+
+            <div class="footer__column col-md-6 hidden-sm hidden-xs">
+                <div class="footer__content-wrapper">
+                    <h3 class="footer__header">Наши услуги</h3>
+                    <div class="footer__content">
+                        [[Wayfinder? &startId=`202` &level=`1` &outerClass=`footer__listing` &hereClass=`footer__listing-item_active` ]]
+                    </div>
+                </div>
+            </div>
+            <!-- footer__column-->
+
+            <div class="footer__column col-md-3 col-xs-6">
+                <div class="footer__content-wrapper">
+                    <h3 class="footer__header">Обратная связь</h3>
+                    <div class="footer__content">
+                        <form class="forms" id="footer-form" action="assets/plugins/sky-forms-pro/skyforms/contacts.php" method="post" novalidate="novalidate">
+                            <fieldset>
+                                <div class="section">
+                                    <label class="input">
+                                        <input name="email" placeholder="E-mail" type="email">
+                                    </label>
+                                </div>
+
+                                <div class="section">
+                                    <label class="textarea">
+                                        <textarea name="message" placeholder="Сообщение" rows="2"></textarea>
+                                    </label>
+                                </div>
+                                <button type="submit" class="button">Отправить</button>
+                            </fieldset>
+
+                            <div class="message">
+                                <i class="rounded-x fa fa-check"></i>
+                                <p class="hidden-xs">Сообщение успешно отправлено!</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- footer__column-->
+
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+<script src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+
+<script src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+
+<script src="assets/js/app.min.js"></script>
+[[*id:is=`138`:then=`
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgb1hQYsMiWne7tmkpK6yTY7bB4SUmF54&signed_in=true&amp;callback=initMap" async defer></script>
+`]]
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        FancyBox.initFancybox();
+        ContactForm.initContactForm();
+    });
+</script>
+
+<!--[[$counters]]-->
+
+</body>
+
+</html>

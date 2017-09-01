@@ -1,0 +1,26 @@
+
+.sky-form .message {
+	display: none;
+	color: #fff !important;
+}
+.sky-form .message i {
+	display: block;
+/*	margin: 0 auto 20px;*/
+	width: 81px;
+	height: 81px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	font-size: 30px;
+	line-height: 81px;
+    color: #fff !important;
+}
+.sky-form.submited fieldset,
+.sky-form.submited footer {
+	display: none;
+}
+.sky-form.submited .message {
+	display: block;
+/*	padding: 100px 30px;*/
+/*	background: rgba(255,255,255,.9);*/
+/*	text-align: center;*/
+}

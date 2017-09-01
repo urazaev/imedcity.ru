@@ -1,0 +1,45 @@
+[[$header]]
+
+<section class="breadcrumbs">
+    <h2>Путь до текущей страницы</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 breadcrumbs__content">[[breadcrumb? &containerTpl=`@INLINE <ol class="breadcrumbs__list breadcrumb" id="breadcrumb" itemprop="breadcrumb">
+                    [[+crumbs]]
+                </ol>
+                `]]
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content__container container">
+    <div class="content__row row">
+        [[$aside]]
+        <main class="content__main col-sm-8">
+            <article class="content__article">
+                <h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1> [[*content]]
+                <div class="doctors-block row">
+                    [[pdoResources? &tpl=`@INLINE
+                    <div class="doctors-block__item col-xs-6 col-sm-4"> 
+                        <div class="doctors-block__content">
+                            <div class="doctors-block__image">
+                                <img src="[[+tv.pic-universe]]" alt="">
+                            </div>
+                            <div class="doctors-block__title">
+                                [[+pagetitle]]
+                            </div> 
+                            <div class="doctors-block__longtitle">
+                                [[+longtitle]]
+                            </div> 
+                        </div>
+                    </div>
+                    ` &includeContent=`1` &includeTVs=`pic-universe` &hideContainers=`1` &processTVs=`1` &parents=`[[*id]]` &sortby=`menuindex` &sortdir=`DESC` ]]
+                </div>
+            </article>
+        </main>
+    </div>
+</div>
+
+
+[[$footer]]

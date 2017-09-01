@@ -1,0 +1,31 @@
+[[$header]]
+
+<section class="breadcrumbs">
+    <h2>Путь до текущей страницы</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 breadcrumbs__content">
+                [[breadcrumb? &containerTpl=`@INLINE <ol class="breadcrumbs__list breadcrumb" id="breadcrumb" itemprop="breadcrumb">
+                    [[+crumbs]]
+                </ol>
+                `]]
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content__container container">
+    <div class="content__row row">
+        [[$aside]]
+        <main class="content__main col-sm-8">
+            <article class="content__article gallery clearfix">
+                <h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1> [[*content]]
+                <div class="row gallery__row">
+                    [[Gallery? &album=`2` &limit=`9999` &thumbTpl=`work-gallery` &thumbWidth=`665` &thumbHeight=`333` &imageWidth=`1000` &imageHeight=`1000`]]
+                </div>
+            </article>
+        </main>
+    </div>
+</div>
+
+[[$footer]]

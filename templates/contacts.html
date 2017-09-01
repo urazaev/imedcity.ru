@@ -1,0 +1,82 @@
+[[$header]]
+
+<section class="breadcrumbs">
+    <h2>Путь до текущей страницы</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 breadcrumbs__content">
+                [[breadcrumb? &containerTpl=`@INLINE <ol class="breadcrumbs__list breadcrumb" id="breadcrumb" itemprop="breadcrumb">
+                    [[+crumbs]]
+                </ol>
+                `]]
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content__container container">
+    <div class="content__row row">
+        <div class="col-md-12">
+            <div id="map" class="gmap"></div>
+        </div>
+        [[$aside]]
+        <main class="content__main col-sm-8">
+            <article class="content__article">
+                <h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1> [[*content]]
+                <div class="row">
+                    <div class="contacts-content col-sm-6">
+                        <h3>Адрес</h3> [[getResourceField? &id=`138` &field=`contacts-address` &processTV=`1`]]
+                        <h3>Телефон</h3> <a href="tel:[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]">[[getResourceField? &id=`138` &field=`contacts-tel` &processTV=`1`]]</a>
+                        <h3>E-mail</h3>
+                        <a href="mailto:[[getResourceField? &id=`138` &field=`contacts-email` &processTV=`1`]]">[[getResourceField? &id=`138` &field=`contacts-email` &processTV=`1`]]</a>
+                        <h3>Режим работы</h3> [[getResourceField? &id=`138` &field=`introtext`]]
+                        <h3>Схема от метро "Дмитровская"</h3>
+                        <a href="assets/img/roadmap.png" class="fancybox-button" data-rel="fancybox-button">
+                            <img src="assets/img/roadmap.png" alt="Схема проезда от метро" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="contacts-form col-sm-6">
+                        <h3>напишите нам</h3>
+                        <form novalidate="novalidate" id="contacts-page" class="forms feedback-form" action="assets/plugins/sky-forms-pro/skyforms/contacts-page.php" method="post">
+                            <fieldset>
+                                <div class="section">
+                                    <label class="input">
+                                        <i class="icon-append fa fa-user"></i>
+                                        <input name="name" placeholder="Ваше имя" type="text">
+                                    </label>
+                                </div>
+                                <div class="section">
+                                    <label class="input">
+                                        <i class="icon-append fa fa-envelope-o"></i>
+                                        <input name="email" placeholder="E-mail" type="email">
+                                    </label>
+                                </div>
+                                <div class="section">
+                                    <label class="input">
+                                        <i class="icon-append fa fa-phone"></i>
+                                        <input name="tel" placeholder="Телефон" type="tel">
+                                    </label>
+                                </div>
+                                <div class="section">
+                                    <label class="textarea">
+                                        <i class="icon-append fa fa-comment"></i>
+                                        <textarea rows="8" name="message" placeholder="Сообщение:" id="message"></textarea>
+                                    </label>
+                                </div>
+                                <p сlass="warninggg">Все поля обязательны для заполнения</p>
+                                <button type="submit" class="btn btn-default button">отправить</button>
+                            </fieldset>
+                            <div class="message">
+                                <i class="rounded-x fa fa-check text-center mb-30"></i>
+                                <p>Сообщение успешно отправленно!</p>
+                            </div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </article>
+        </main>
+    </div>
+</div>
+
+[[$footer]]

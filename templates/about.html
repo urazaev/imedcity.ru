@@ -1,0 +1,57 @@
+[[$header]]
+
+<section class="breadcrumbs">
+    <h2>Путь до текущей страницы</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 breadcrumbs__content">
+                [[breadcrumb? &containerTpl=`@INLINE <ol class="breadcrumbs__list breadcrumb" id="breadcrumb" itemprop="breadcrumb">[[+crumbs]]
+                </ol>
+                `]]
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="content__container container">
+    <div class="content__row row">
+        [[$aside]]
+        <main class="content__main col-sm-8">
+            <article class="content__article content__padding">
+                <h1 class="">[[*longtitle:notempty=`[[*longtitle]]`:isempty=`[[*pagetitle]]`]]</h1> [[*content]]
+
+
+                <section class="leadblock row">
+
+                    <div class="leadblock__space col-md-12">
+                        <h2>Партнеры клиники</h2>
+                        <div class="leadblock__content">
+                            [[*partners-content]]
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <section class="certs row">
+                    <div class="col-md-12">
+                        <h2 class="certs__heading">Наши сертификаты и лицензии</h2>
+                    </div>
+                    [[pdoResources? &tpl=`@INLINE
+                    <div class="certs__column col-sm-4 col-xs-6">
+                        <a class="fancybox-button zoomer [[+tags]]" data-rel="fancybox-button" href="[[+tv.pic-universe]]">
+                            <span class="overlay-zoom">  
+    <img alt="" src="[[+tv.pic-universe]]" class="img-responsive">
+    <span class="zoom-icon"></span>
+                            </span>
+                        </a>
+                    </div>
+                    ` &includeContent=`1` &includeTVs=`pic-universe` &processTVs=`1` &parents=`[[*id]]` &depth=`1` &sortby=`menuindex` &sortdir=`DESC`]]
+
+                </section>
+            </article>
+        </main>
+    </div>
+</div>
+
+[[$footer]]
